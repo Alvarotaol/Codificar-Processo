@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/gastos', 'CidadaoDeOlhoController@maioresGastosPorMes');
+Route::get('/redes', 'CidadaoDeOlhoController@redesMaisUsadas');

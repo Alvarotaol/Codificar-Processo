@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Deputado;
+use Illuminate\Support\Facades\DB;
 
 class CidadaoDeOlhoController extends Controller
 {
@@ -46,5 +47,14 @@ class CidadaoDeOlhoController extends Controller
             }
         }
         return $top;
+    }
+
+    public function redesMaisUsadas()
+    {
+        $redes = DB::table('redes')
+                 ->select('nome', DB::raw('count(*) as total'))
+                 ->groupBy('nome')
+                 ->get();
+        return $redes->sortByDesc('total')->values()->all();
     }
 }
