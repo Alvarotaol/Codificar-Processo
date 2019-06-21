@@ -16,7 +16,6 @@
         </header>
         <aside>
             <ul>
-                <li><a href="{{route('coletar')}}">Coletar dados</a></li>
                 <li><a href="">Gastos</a></li>
                 <li><a href="">Redes sociais</a></li>
             </ul>
@@ -26,23 +25,5 @@
         </div>
         <footer>Desenvolvido por Álvaro Tavares para o processo de seleção da Codificar</footer>
     </section>
-
-    <div>
-    <p>Deputados</p>
-    <select>
-        @foreach($deputados as $deputado)
-        <option>
-            {{$deputado->nome}} - {{$deputado->id}}
-        </option>
-        @endforeach
-    </select>
-    <select>
-        @foreach($redes as $rede)
-        <option>
-            {{$rede->nome}}
-        </option>
-        @endforeach
-    </select>
-    </div>
 </body>
 </html>
