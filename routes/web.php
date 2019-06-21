@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index')->name('/');
+
+Route::get('/coletar', 'IndexController@coletarDados')->name('coletar');
