@@ -35,10 +35,18 @@ aside ul li a {
 
 div.content {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-mes li {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
 
     width: 100%;

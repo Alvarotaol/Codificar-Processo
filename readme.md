@@ -16,3 +16,10 @@ Codificar - Processo Seletivo
         php artisan popular --cache (demora cerca de 3 min)
     O primeiro comando demora mais pois realiza mais de 1000 consultas à API.
     O segundo comando usa o arquivo storage/app/verbas.json que contém a maior parte dos dados para poupar tempo.
+
+    Por fim, basta executar
+        php artisan serve
+    Para que uma página que acessa e exibe as informações fique disponível em
+        localhost:8000
+    
+    Essa página usa o framework jQuery para se conectar com a api.

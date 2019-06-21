@@ -8,4 +8,9 @@ class Verba extends Model
 {
     protected $guarded = [];
     public $timestamps = false;
+
+    public function deputado()
+    {
+        return $this->belongsTo('App\Models\Deputado');
+    }
 }
