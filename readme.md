@@ -1,4 +1,16 @@
 Codificar - Processo Seletivo
+
+##Sobre o projeto
+    Este projeto se divide em três partes: 
+    # Um service chamado ApiReader que lê os dados disponíveis na api da almg e grava no banco.
+      Ele se encontra na pasta app/Services e é chamado através da linha de comando. Ver app/Console/Commands para detalhes.
+    # Uma api que envia os dados salvos na forma de rankings. Dos deputados que mais usam verbas indenizatórias e das redes sociais mais usadas. Ela está definida em app/Controllers/CidadaoDeOlhoController.php
+    # Uma página simples que lê os dados fornecidos pela api.
+      A view é retornada pelo IndexController, mas o código javascript que faz as chamadas à api está em public/js/app.js
+
+    O projeto define 3 modelos: Deputado, Rede e Verba
+    Deputado se relaciona com Verba (um para muitos), mas Rede não tem relação. O motivo é que são solicitadas as verbas para o ano de 2017, na legislatura anterios, mas as redes sociais só são fornecidas para os deputados da legislatura atual (2019).
+
 ##Como Rodar
     Após clonar ou baixar do github executar
         composer install
